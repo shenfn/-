@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" spacing="10" fx:controller="controller.ViewTransactionController" stylesheets="@resources/style.css">
+    <Label text="交易明细" />
+    <TableView fx:id="transactionTable" prefWidth="600" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="typeColumn" text="交易类型" />
+            <TableColumn fx:id="amountColumn" text="金额" />
+            <TableColumn fx:id="purposeColumn" text="用途" />
+            <TableColumn fx:id="dateColumn" text="日期" prefWidth="150"/>
+            <TableColumn fx:id="editColumn" text="修改" prefWidth="100"/>
+        </columns>
+    </TableView>
+    <Button text="返回" onAction="#handleBackButton" />
+</VBox>

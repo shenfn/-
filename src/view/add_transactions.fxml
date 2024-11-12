@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AddTransactionController" spacing="10" alignment="CENTER" styleClass="vbox" prefWidth="600" prefHeight="400" stylesheets="@resources/style.css">
+    <children>
+        <Label text="添加记账" styleClass="title-label"/>
+
+        <Label text="交易类型:"/>
+        <ChoiceBox fx:id="typeChoiceBox">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="收入"/>
+                    <String fx:value="支出"/>
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <Label text="金额:"/>
+        <TextField fx:id="amountField"/>
+
+        <Label text="用途:"/>
+        <TextField fx:id="purposeField"/>
+
+        <Label text="日期:"/>
+        <DatePicker fx:id="datePicker"/>
+
+        <Button text="提交" onAction="#handleSubmit"/>
+        <Button text="返回" onAction="#handleBack"/>
+    </children>
+</VBox>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.Scene?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TransactionController" stylesheets="@resources/style.css">
+    <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" prefWidth="600" prefHeight="400">
+        <Tab fx:id="homeTab" text="主页">
+            <VBox fx:id="homeContent" alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+                <Label fx:id="welcomeLabel"/>
+            </VBox>
+        </Tab>
+        <Tab fx:id="accountTab" text="记账">
+            <VBox fx:id="accountContent" alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+                <Button fx:id="viewTransactionsButton" text="查看明细"/>
+                <Button fx:id="addTransactionButton" text="添加记账"/>
+            </VBox>
+        </Tab>
+        <Tab fx:id="settingsTab" text="设置">
+            <VBox fx:id="settingsContent" alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+                <Button fx:id="logoutButton" text="注销"/>
+                <Button fx:id="backButton" text="退出登录"/>
+            </VBox>
+        </Tab>
+    </TabPane>
+</AnchorPane>

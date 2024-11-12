@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="mainGrid" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.MainController" stylesheets="@resources/style.css"
+          vgap="20" hgap="10" prefWidth="500" prefHeight="400"
+          style="-fx-background-image: url('/view/resources/images/background.jpg'); -fx-background-size: cover; -fx-background-repeat: no-repeat;">
+    <Label text="欢迎来到记账盒子！请选择操作:" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+
+    <Label text="请输入账号:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="accountField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="请输入密码:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <PasswordField fx:id="passwordField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <HBox spacing="15" alignment="CENTER" GridPane.rowIndex="3" GridPane.columnSpan="2">
+        <Button fx:id="acountButton" text="注册" onAction="#handleCount"/>
+        <Button fx:id="loginButton" text="登录" onAction="#handleLogin" />
+        <Button fx:id="exitButton" text="退出" onAction="#handleExit" />
+    </HBox>
+</GridPane>
